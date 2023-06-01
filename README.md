@@ -67,3 +67,10 @@ The state is a built-in React object that is used to contain data or information
 1. Always make use of setState and never modify the state directly.
 2. Code has to be executed after the state has been updated. Place that code in the call back function which is second argument to setState method.
 3. When you have to update state based on the prev state value, pass in a func as an argument instead of regular object. 
+
+‼ <b>Destructuring the props and state -</b>
+The destructuring is an ES6 feature that makes it possible to unpack values from arrays or properties from objects into distinct variables. In React, destructuring props and states improve code readability.
+
+‼ <b>Event Handler -</b> <br>
+* Just like HTML DOM events, React can perform actions based on user events. React has the same events as HTML: click, change, mouseover etc.
+* They are function not a function call so don't need to write paranthesis. 

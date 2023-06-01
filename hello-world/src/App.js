@@ -6,22 +6,25 @@ import Hello from './components/Hello';
 import React from 'react';
 import Message from './components/Message';
 import Counter from './components/Counter';
+import FunctionClick from './components/FunctionClick';
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
+      <FunctionClick />
+
       {/* <Counter />
       <Message /> */}
-      <Greet name="Bruce" heroName="Batman">
+      {/* <Greet name="Bruce" heroName="Batman">
         <p>This is children props</p>
-      </Greet>
+      </Greet> */}
       {/* <Greet name="Clark" heroName="Superman"> 
         <button>Action</button>
       </Greet>
       <Greet name="Alice" heroName="Wonder Women"/> */}
 
-      <Welcome name="Bruce" heroName="Batman"/>
+      {/* <Welcome name="Bruce" heroName="Batman"/> */}
       {/* <Welcome name="Clark" heroName="Superman"/>
       <Welcome name="Alice" heroName="Wonder Women"/>
       <Hello /> */}
