@@ -11,18 +11,18 @@ function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
-      <Counter />
-      {/* <Message />
+      {/* <Counter />
+      <Message /> */}
       <Greet name="Bruce" heroName="Batman">
         <p>This is children props</p>
       </Greet>
-      <Greet name="Clark" heroName="Superman"> 
+      {/* <Greet name="Clark" heroName="Superman"> 
         <button>Action</button>
       </Greet>
-      <Greet name="Alice" heroName="Wonder Women"/>
+      <Greet name="Alice" heroName="Wonder Women"/> */}
 
       <Welcome name="Bruce" heroName="Batman"/>
-      <Welcome name="Clark" heroName="Superman"/>
+      {/* <Welcome name="Clark" heroName="Superman"/>
       <Welcome name="Alice" heroName="Wonder Women"/>
       <Hello /> */}
     </div>
