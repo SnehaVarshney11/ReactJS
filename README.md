@@ -56,3 +56,14 @@ Note:- Functional comp isn't stateless.
 
 ‼ <b>Props -</b> 
 Props is just an object that contains the attributes and their values which have been passed through parent component. They are immutable. 
+
+‼ <b>State -</b>
+The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.
+
+‼ <b>Props VS State -</b>
+<img src="/Assests/PropVsState.png" alt="Prop Vs State"> <br>
+
+‼ <b>setState -</b>
+1. Always make use of setState and never modify the state directly.
+2. Code has to be executed after the state has been updated. Place that code in the call back function which is second argument to setState method.
+3. When you have to update state based on the prev state value, pass in a func as an argument instead of regular object. 

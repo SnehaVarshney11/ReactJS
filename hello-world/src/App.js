@@ -4,11 +4,15 @@ import Greet from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import React from 'react';
+import Message from './components/Message';
+import Counter from './components/Counter';
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
+      <Counter />
+      {/* <Message />
       <Greet name="Bruce" heroName="Batman">
         <p>This is children props</p>
       </Greet>
@@ -20,7 +24,7 @@ function App() {
       <Welcome name="Bruce" heroName="Batman"/>
       <Welcome name="Clark" heroName="Superman"/>
       <Welcome name="Alice" heroName="Wonder Women"/>
-      <Hello />
+      <Hello /> */}
     </div>
   ); 
 
