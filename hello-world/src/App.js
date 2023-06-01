@@ -7,12 +7,14 @@ import React from 'react';
 import Message from './components/Message';
 import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
+import ClickClass from './components/ClickClass';
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
       <FunctionClick />
+      <ClickClass />
 
       {/* <Counter />
       <Message /> */}
