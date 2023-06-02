@@ -74,3 +74,17 @@ The destructuring is an ES6 feature that makes it possible to unpack values from
 ‼ <b>Event Handler -</b> <br>
 * Just like HTML DOM events, React can perform actions based on user events. React has the same events as HTML: click, change, mouseover etc.
 * They are function not a function call so don't need to write paranthesis. 
+
+‼ <b>Event Binding -</b> <br>
+1st Method - Binding in render (Use Bind)  <br>
+2nd Method - Arrow function in render <br>
+3rd Method - Binding in class constructor (Deals with binding the event handler in constructor as opposed to binding in rendor method.) <br>
+4th Method - Class property as arrow function.  <br>
+
+‼ <b>Conditional Rendering (UserGreeting.js file)-</b> <br> 
+1. When building react application, often need to show or hide some html based on a certain condition, use Conditional Rendering. Conditional Rendering works the same way conditions work in JS. <b>
+2. There are 4 approaches - <br>
+a. if/else <br> b. Element variable <br> c. Ternary conditional operator <br> d. Short circuit operator -> Use when we want to print something or nothing
+
+‼ <b>List Rendering-</b> <br> 
+Transforming arrays into lists of elements. When you're working with React, you will often times need to render lists of items. With the map() method, you can create new results from your current lists or even showcase all the items in your lists.

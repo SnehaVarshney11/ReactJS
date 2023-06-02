@@ -8,14 +8,21 @@ import Message from './components/Message';
 import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
 import ClickClass from './components/ClickClass';
+import EventBind from './components/EventBind';
+import ParentComponent from './components/ParentComponent';
+import UserGreeting from './components/UserGreeting';
+import NameList from './components/NameList';
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
-      <FunctionClick />
-      <ClickClass />
-
+      <NameList />
+      {/* <UserGreeting /> */}
+      {/* <ParentComponent /> */}
+      {/* <EventBind /> */}
+      {/* <FunctionClick />
+      <ClickClass /> */}
       {/* <Counter />
       <Message /> */}
       {/* <Greet name="Bruce" heroName="Batman">
@@ -25,7 +32,6 @@ function App() {
         <button>Action</button>
       </Greet>
       <Greet name="Alice" heroName="Wonder Women"/> */}
-
       {/* <Welcome name="Bruce" heroName="Batman"/> */}
       {/* <Welcome name="Clark" heroName="Superman"/>
       <Welcome name="Alice" heroName="Wonder Women"/>
