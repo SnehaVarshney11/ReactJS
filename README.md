@@ -88,3 +88,18 @@ a. if/else <br> b. Element variable <br> c. Ternary conditional operator <br> d.
 
 ‼ <b>List Rendering-</b> <br> 
 Transforming arrays into lists of elements. When you're working with React, you will often times need to render lists of items. With the map() method, you can create new results from your current lists or even showcase all the items in your lists.
+
+‼ <b>Lists And Keys-</b> 
+1. A key is a special string attribute you need to include when creating a list of element.
+2. Keys give the element a special identity.
+3. Helps react identify which items have changed, are added, or are removed.
+<img src="/Assests/ListWithoutKey.png" alt="List Without Key"> <br>
+<img src="/Assests/ListWithKey.png" alt="List With Key"> <br>
+
+‼ <b>When to use Index As Key-</b> 
+1. The items in your list don't have unique id. 
+2. The list is a static list and will not change.
+3. The list never be reordered or filtered. <br>
+
+<b>Issue:-</b>
+<img src="/Assests/IndexAsKey.png" alt="Problem in Index As Key"> <br>
