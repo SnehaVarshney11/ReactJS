@@ -82,7 +82,7 @@ The destructuring is an ES6 feature that makes it possible to unpack values from
 4th Method - Class property as arrow function.  <br>
 
 ‼ <b>Conditional Rendering (UserGreeting.js file)-</b> <br> 
-1. When building react application, often need to show or hide some html based on a certain condition, use Conditional Rendering. Conditional Rendering works the same way conditions work in JS. <b>
+1. When building react application, often need to show or hide some html based on a certain condition, use Conditional Rendering. Conditional Rendering works the same way conditions work in JS. 
 2. There are 4 approaches - <br>
 a. if/else <br> b. Element variable <br> c. Ternary conditional operator <br> d. Short circuit operator -> Use when we want to print something or nothing
 
@@ -103,3 +103,9 @@ Transforming arrays into lists of elements. When you're working with React, you 
 
 <b>Issue:-</b>
 <img src="/Assests/IndexAsKey.png" alt="Problem in Index As Key"> <br>
+
+‼ <b>Styling React Component -</b> 
+1. CSS stylesheet
+2. Inline styling -> They aren't specified as a string instead they're specified with object whose key is camel case version of the styling and the value is usually a string. 
+3. CSS Module -> Available version 2 or higher. File name must be suffix <b>.module.css</b>. Adv - Classes are locally scoped by-default. 
+4. CSS in JS libraries
