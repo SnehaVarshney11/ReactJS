@@ -1,5 +1,6 @@
 // FILE OF List Rendering
 import React from 'react'
+import Person from './Person'
 
 function NameList() {
     const names = ['Bruce', 'Alice', 'Charles']
@@ -31,7 +32,9 @@ function NameList() {
             skill: 'CSS'
         },
     ]
-    const personList = person.map(person => <h2>I am {person.name}. I am {person.age} yaers old. I know {person.skill}.</h2>)
+    // const personList = person.map(person => <h2>I am {person.name}. I am {person.age} yaers old. I know {person.skill}.</h2>)
+    //About LIST AND KEY
+    const personList = person.map(person => <Person key={person.id} person = {person}/>)
   return (
     <div>
         {
