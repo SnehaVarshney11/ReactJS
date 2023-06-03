@@ -109,3 +109,30 @@ Transforming arrays into lists of elements. When you're working with React, you 
 2. Inline styling -> They aren't specified as a string instead they're specified with object whose key is camel case version of the styling and the value is usually a string. 
 3. CSS Module -> Available version 2 or higher. File name must be suffix <b>.module.css</b>. Adv - Classes are locally scoped by-default. 
 4. CSS in JS libraries
+
+‼ <b>Basics of Form Hanling -</b> <br>
+<b>Controlled components -</b>
+Form elements which are controlled by react, called controlled components. 
+```
+E.g. 
+<input type='text' value={this.state.email} onChange={this.changeEmailHandler} >
+```
+In react, value of the input field is set to the state property and we use setState method in onChange to update the state.
+```
+this.state = {
+    email: ''
+}
+this.changeEmailHandler = (event) => {
+    this.setState({email:event.target.value})
+}
+```
+
+‼ <b>Life Cycle Methods in a Class Component -</b> 
+1. Mounting -> When an instance of a component is being created and inserted into DOM. There are 4 methods: constructor, static getDerivedStateFromProps, render and componentDidMount <br>
+A) constructor(props) - 🎗 A special function that will get call whenever a new component is created. <br>
+🎗 Initializing state, Binding the event handler. <br>
+🎗 Don't cause side effect. <br>
+🎗super(props), Directly override this.state
+2. Updating -> When a component is being re-rendered as a result of changes to either its props or state. There are 5 methods: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate <br>
+3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
+4. Error Handling -> When there is an error during rendering, in a lifecycle method, or in a constructor of any child component. There are 2 methods: static getDerivedStateFromError and componentDidCatch <br>
