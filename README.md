@@ -135,4 +135,4 @@ A) constructor(props) - 🎗 A special function that will get call whenever a ne
 🎗super(props), Directly override this.state
 2. Updating -> When a component is being re-rendered as a result of changes to either its props or state. There are 5 methods: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate <br>
 3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
-4. Error Handling -> When there is an error during rendering, in a lifecycle method, or in a constructor of any child component. There are 2 methods: static getDerivedStateFromError and componentDidCatch <br>
+4. Error Handling -> When there is an error during rendering, in a lifecycle method, or in a constructor of any child component. There are 2 methods: static getDerivedStateFromError and componentDidCatch <br> 
