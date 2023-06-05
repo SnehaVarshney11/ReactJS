@@ -129,10 +129,29 @@ this.changeEmailHandler = (event) => {
 
 ‼ <b>Life Cycle Methods in a Class Component -</b> 
 1. Mounting -> When an instance of a component is being created and inserted into DOM. There are 4 methods: constructor, static getDerivedStateFromProps, render and componentDidMount <br>
-A) constructor(props) - 🎗 A special function that will get call whenever a new component is created. <br>
+A) constructor(props) - <br>
+🎗 A special function that will get call whenever a new component is created. <br>
 🎗 Initializing state, Binding the event handler. <br>
-🎗 Don't cause side effect. <br>
-🎗super(props), Directly override this.state
+🎗 Don't cause side effect. Ex: HTTP request <br>
+🎗super(props), Directly override this.state <br>
+
+B)static getDerivedStateFromProps(props, state) - <br>
+🎗 Rarely Used Method. <br>
+🎗 When the state of the component depends on the changes in props over time. <br>
+🎗 Set the state. <br>
+🎗 It's a static method and not use this keyword. Simply return object that represent new state. <br>
+🎗 Don't cause side effect. Ex: HTTP request <br>
+
+C) render() - <br>
+🎗 Only required method. <br>
+🎗Read props & state and return JSX. <br>
+🎗 Don't change the state or interact with DOM and make ajax calls. <br>
+🎗 Children components lifecycle methods are also executed. <br>
+
+D) componentDidMount() - <br>
+🎗 Will be called only once in whole lifecycle and invoked immediately after component and it's all children components have been rendered to DOM. <br>
+🎗 Cause side effect. Ex: Interact with DOM or perform any ajax calls to load data. <br> 
+
 2. Updating -> When a component is being re-rendered as a result of changes to either its props or state. There are 5 methods: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate <br>
 3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
 4. Error Handling -> When there is an error during rendering, in a lifecycle method, or in a constructor of any child component. There are 2 methods: static getDerivedStateFromError and componentDidCatch <br> 
