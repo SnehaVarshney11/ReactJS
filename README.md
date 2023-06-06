@@ -133,25 +133,44 @@ A) constructor(props) - <br>
 🎗 A special function that will get call whenever a new component is created. <br>
 🎗 Initializing state, Binding the event handler. <br>
 🎗 Don't cause side effect. Ex: HTTP request <br>
-🎗super(props), Directly override this.state <br>
-
+🎗super(props), Directly override this.state <br> <br>
 B)static getDerivedStateFromProps(props, state) - <br>
 🎗 Rarely Used Method. <br>
 🎗 When the state of the component depends on the changes in props over time. <br>
 🎗 Set the state. <br>
 🎗 It's a static method and not use this keyword. Simply return object that represent new state. <br>
-🎗 Don't cause side effect. Ex: HTTP request <br>
-
+🎗 Don't cause side effect. Ex: HTTP request <br><br>
 C) render() - <br>
 🎗 Only required method. <br>
-🎗Read props & state and return JSX. <br>
+🎗 Read props & state and return JSX. <br>
 🎗 Don't change the state or interact with DOM and make ajax calls. <br>
-🎗 Children components lifecycle methods are also executed. <br>
-
+🎗 Children components lifecycle methods are also executed. <br><br>
 D) componentDidMount() - <br>
 🎗 Will be called only once in whole lifecycle and invoked immediately after component and it's all children components have been rendered to DOM. <br>
 🎗 Cause side effect. Ex: Interact with DOM or perform any ajax calls to load data. <br> 
 
 2. Updating -> When a component is being re-rendered as a result of changes to either its props or state. There are 5 methods: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate <br>
+A) static getDerivedStateFromProps(props, state) - <br>
+🎗 Method is called everytime a component is re-renderd. <br>
+🎗 Set the state. <br>
+🎗 Don't cause side effects. Ex: HTTP requests.  <br><br>
+B) shouldComponentUpdate(nextProps, nextState) - <br>
+🎗 Rarely Used Method. <br>
+🎗 Dictates if the component should re-render or not <br>
+🎗 Performance optimization. <br>
+🎗 Don't cause side effects. Ex: HTTP requests, Calling the setState method. <br><br>
+C) render() -  <br>
+🎗 Only required method. <br>
+🎗 Read props & state and return JSX. <br>
+🎗 Don't change the state or interact with DOM and make ajax calls. <br><br>
+D) getSnapshotBeforeUpdate(prevProps, prevState) - <br>
+🎗 Rarely used method. <br>
+🎗 Called right before the changes from the virtual DOM are to br reflected in DOM. <br>
+🎗 Capture some info. from DOM. <br>
+🎗 Method will either return null or return a value. Returned a value will be passed as the third parameter to next method. <br><br>
+E) componentDidUpdate(prevProps, prevState, snapshot) - <br>
+🎗 Called after render is finished in re-render cycles. <br>
+🎗 Cause side effect. <br><br>
+
 3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
 4. Error Handling -> When there is an error during rendering, in a lifecycle method, or in a constructor of any child component. There are 2 methods: static getDerivedStateFromError and componentDidCatch <br> 

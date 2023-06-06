@@ -17,12 +17,14 @@ import Inline from './components/Inline';
 import './appStyle.css'; 
 import styles from './appStyle.module.css' 
 import Form from './components/Form';
+import Mounting from './components/Mounting';
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
-      <Form />
+      <Mounting />
+      {/* <Form /> */}
       {/* <h1 className='error'>Error</h1>
       <h1 className={styles.success}>Success</h1> */}
       {/* <Stylesheet primary={true}/> */}
