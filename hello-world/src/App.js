@@ -3,7 +3,6 @@ import './App.css';
 import Greet from './components/Greet';
 import Welcome from './components/Welcome';
 import Hello from './components/Hello';
-import React from 'react';
 import Message from './components/Message';
 import Counter from './components/Counter';
 import FunctionClick from './components/FunctionClick';
@@ -19,12 +18,15 @@ import styles from './appStyle.module.css'
 import Form from './components/Form';
 import Mounting from './components/Mounting';
 import Updating from './components/Updating';
+import FragmentDemo from './components/FragmentDemo';
+
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
-      <Updating />
+     <FragmentDemo />
+      {/* <Updating /> */}
       {/* <Mounting /> */}
       {/* <Form /> */}
       {/* <h1 className='error'>Error</h1>

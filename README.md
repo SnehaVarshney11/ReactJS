@@ -133,8 +133,8 @@ A) constructor(props) - <br>
 🎗 A special function that will get call whenever a new component is created. <br>
 🎗 Initializing state, Binding the event handler. <br>
 🎗 Don't cause side effect. Ex: HTTP request <br>
-🎗super(props), Directly override this.state <br> <br>
-B)static getDerivedStateFromProps(props, state) - <br>
+🎗 super(props), Directly override this.state <br> <br>
+B) static getDerivedStateFromProps(props, state) - <br>
 🎗 Rarely Used Method. <br>
 🎗 When the state of the component depends on the changes in props over time. <br>
 🎗 Set the state. <br>
@@ -173,4 +173,16 @@ E) componentDidUpdate(prevProps, prevState, snapshot) - <br>
 🎗 Cause side effect. <br><br>
 
 3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
+A) componentWillUnmount - <br>
+🎗 Method is invoked immediately before a component is unmounted and destroyed. <br>
+🎗 Cancelling any network requests, removing event handlers, cancelling any subscription and also invalidating timers. <br>
+🎗 Don't call the setState method. <br><br>
+
 4. Error Handling -> When there is an error during rendering, in a lifecycle method, or in a constructor of any child component. There are 2 methods: static getDerivedStateFromError and componentDidCatch <br> 
+A) static getDerivedStateFromError(error) <br>
+B) componentDidCatch(error, info) <br>
+🎗 These methods are called when there is an error either during rendering, in a lifecycle method or in a constructor of any child component. <br><br>
+
+‼ <b>Fragments -</b> <br>
+🎗 Lets you group a list of children elements without adding extra nodes to DOM.  We can replace enclosing div tag with react fragment and that will prevent the extra node from being added to DOM.<br>
+🎗 It can accept key attribute when rendering list of items. <br><br>
