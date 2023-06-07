@@ -18,12 +18,14 @@ import './appStyle.css';
 import styles from './appStyle.module.css' 
 import Form from './components/Form';
 import Mounting from './components/Mounting';
+import Updating from './components/Updating';
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
-      <Mounting />
+      <Updating />
+      {/* <Mounting /> */}
       {/* <Form /> */}
       {/* <h1 className='error'>Error</h1>
       <h1 className={styles.success}>Success</h1> */}
