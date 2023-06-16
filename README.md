@@ -186,3 +186,53 @@ B) componentDidCatch(error, info) <br>
 ‼ <b>Fragments -</b> <br>
 🎗 Lets you group a list of children elements without adding extra nodes to DOM.  We can replace enclosing div tag with react fragment and that will prevent the extra node from being added to DOM.<br>
 🎗 It can accept key attribute when rendering list of items. <br><br>
+
+‼ <b>Pure Components -</b> <br>
+🎗 A React component is considered pure if it renders the same output for the same state and props. For this type of class component, React provides the PureComponent base class. Class components that extend the React. PureComponent class are treated as pure components.<br>
+🎗 It implements shouldComponentUpdate with a shallow props and state comparison.   <br> 
+🎗 SC  of prevState with curState <br> 
+🎗 SC of prevProp with curProp <br>
+🎗 We can create a component by extending PureComponent class. <br>
+🎗 If there is no difference, the component is not re-render. <br>
+🎗 Never mutate the state. Always return a new object that reflects the new state. <br>
+🎗 It will work only class based component. <br>
+
+‼ <b>Shallow Comparison (SC)-</b> <br>
+🎗 Primitive type:- a (sc) b return true if a and b have same value and same type. EX:- String 'sneha' (SC) String 'sneha' return true; <br>
+🎗 Complex type:- a (sc) b return true if a and b references the same object.
+```
+Ex:- 
+var a = [1,2,3];
+var b = [1,2,3];
+var c = a;
+var ab_eq = (a===b) //false
+var ac_eq = (a===c) //true
+```
+
+‼ <b>Memo -</b> <br>
+🎗 It is like as pure component. The difference is that pure comp works on class component and memo works on functional component. <br> 
+
+‼ <b>Refs -</b> <br> 
+🎗 Refs is the shorthand used for references in React. It is similar to keys in React. It is an attribute which makes it possible to store a reference to particular DOM nodes or React elements. It provides a way to access React DOM nodes or React elements and how to interact with it. <br>
+🎗 Can't use in functional component. <br>
+
+‼ <b>Forwarding Refs -</b> <br> 
+🎗 It is a technique for automatically passing a ref through a component to one of its children. 
+🎗 It's very useful when building reusable component libraries. 
+🎗 forwardRef is a function used to pass the ref to a child component. 
+
+‼ <b>Portals -</b> <br> 
+🎗 It provides a way o render children into a DOM node that exists outside the DOM hierarchy of parent component. <br>
+🎗 React Portals are an advanced concept that allows developers to render their elements outside the React hierarchy tree without comprising the parent-child relationship between components. Usually, typical React components are located within the DOM. <br>
+🎗 It is useful when you want to have a parent-child relationship in your components while you want to render a child component outside of the parent. <br> 
+
+‼ <b>Error boundary -</b> <br> 
+🎗 A class component that implements either one or both of the lifecycle methods getDerivedSatateFromError or componentDidCatch becomes an error boundary. <br>
+🎗 The static method getDerivedSatateFromError method is used to render a fallback UI after an error is thrown and componentDidCatch is used to log error information.<br>
+
+‼ <b>Higher Order Component -</b> <br> 
+🎗 It is a advance technique for reusing component logic. EX: In clickCounter and hoverCounter file, we use the same code. So why we are writing the same code again. In this condition we use HOC. <br>
+🎗 Higher-order component is a function that takes a component and returns a new component. <br>
+🎗 A component transforms props into UI, a higher-order component transforms a component into another component. <br>
+🎗 <b>Syntax: </b> <br>
+const NewComponent = higherOrderComponent(originalComponent)  

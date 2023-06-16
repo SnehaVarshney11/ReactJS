@@ -19,13 +19,34 @@ import Form from './components/Form';
 import Mounting from './components/Mounting';
 import Updating from './components/Updating';
 import FragmentDemo from './components/FragmentDemo';
+import Refs from './components/Refs';
+import FocusInput from './components/FocusInput';
+import FRParentInput from './components/FRParentInput';
+import Portal from './components/Portal';
+import Hero from './components/Hero';
+import ErrorBoundary from './components/ErrorBoundary';
+import ClickCounter from './components/ClickCounter';
+import HoverCounter from './components/HoverCounter';
 
 
 function App() {
   //This is JSX version to write react code 
   return (
     <div className="App">
-     <FragmentDemo />
+      <HoverCounter />
+      <ClickCounter />
+      {/* <ErrorBoundary>
+        <Hero heroName="Batman"/>
+        <Hero heroName="Superman" />
+        <Hero heroName="joker" />
+      </ErrorBoundary> */}
+      
+      {/* <Portal /> */}
+      {/* <FRParentInput /> */}
+      {/* <FocusInput /> */}
+      {/* <Refs /> */}
+      {/* <PureComponent /> */}
+     {/* <FragmentDemo /> */}
       {/* <Updating /> */}
       {/* <Mounting /> */}
       {/* <Form /> */}
