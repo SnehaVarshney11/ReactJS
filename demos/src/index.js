@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import ParentComponent from './Hooks/Context/Pcomponent';
+import CounterRef from './Hooks/Ref/counter';
 import Counter from './Hooks/State/useState/counter';
+import FavColor from './Hooks/example';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -10,6 +12,8 @@ root.render(
   <React.StrictMode>
     <Counter/>
     <ParentComponent />
+    <FavColor /> <br />
+    <CounterRef /> 
   </React.StrictMode>
 );
 
