@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import MyComponent from './Hooks/State/useReducer/comp';
+import ParentComponent from './Hooks/Context/Pcomponent';
 import Counter from './Hooks/State/useState/counter';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -8,8 +8,8 @@ import reportWebVitals from './reportWebVitals';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-  <Counter />
-    <MyComponent />
+    <Counter/>
+    <ParentComponent />
   </React.StrictMode>
 );
 
