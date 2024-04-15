@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import Frag from './Components/In-Built/Fragment';
+import ProfilerComp from './Components/In-Built/Profiler';
 import ParentComponent from './Hooks/Context/Pcomponent';
-import Home from './Hooks/Custom Hook';
 import Component from './Hooks/Effect/component';
 import CounterEffect from './Hooks/Effect/counter';
 import ParentMemo from './Hooks/Memo/examp';
@@ -21,7 +22,9 @@ root.render(
     <CounterEffect /> <br />
     <Component />  <br />
     <ParentMemo /> <br />
-    <Home />
+    {/* <Home /> <br/> */}
+    <Frag /> <br />
+    <ProfilerComp /> <br/>
   </React.StrictMode>
 );
 
