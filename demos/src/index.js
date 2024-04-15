@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import MyClassComponent from './Components/Class/Example';
+import MyFunctionalComponent from './Components/Functional/Example';
 import Frag from './Components/In-Built/Fragment';
 import ProfilerComp from './Components/In-Built/Profiler';
 import ParentComponent from './Hooks/Context/Pcomponent';
@@ -25,6 +27,8 @@ root.render(
     {/* <Home /> <br/> */}
     <Frag /> <br />
     <ProfilerComp /> <br/>
+    <MyClassComponent /> <br/>
+    <MyFunctionalComponent /> <br/>
   </React.StrictMode>
 );
 
