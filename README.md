@@ -1,12 +1,13 @@
 # All about ReactJS
 
 ‼ <b>What is React?</b>  <br>
-* It is an open source JS library for building user interfaces. It is focus on doing one thing. Not focus on other like routing or http request only focus to build UI. <br>
+* It's a free, open-source JavaScript library that's used to build user interfaces (UIs) for single-page applications. It's a component-based library that's designed to simplify the process of building UIs by combining sections of code, or components, into full websites.  <br>
 * Created and Maintained by Facebook. <br>
 * It has Component Based Architecture. (like header, footer, sidenav etc...) <br>
 * Reusable Code  <br>
 * Declarative -> Tell only what you want and react will build the actual UI <br>
 * It'll fit everywhere whether it is portion of any page, complete page oe entire app itself. <br>
+* Focus on View Layer. <br>
 
 ‼ <b>Create React Application - </b>  <br>
 1. Using npx <br>
@@ -16,20 +17,22 @@ cd app-name <br> npm run start <br>
 run - npm install create-react-app -g <br>
 run - create-react-app<app-name> <br>
 
+<b>NOTE -></b> Use npx to create a React project because it ensures you're using the latest version of create-react-app without needing to install it globally. It's simpler and avoids potential version conflicts.
+
 ‼ <b>Components -</b>  <br>
 <img src="/Assests/Component.png" alt="Component"> <br>
 * They are reusable. <br>
 * Component code is placed on JavaScript file. E.g.- AppComponent is placed in App.js <br>
 * There are 2 types of component -
 
-1. Stateless Functional Component - Like as JS Function, return HTML (JSX) which describes the UI. Need to import only one component i.e. React
+<b><u>Stateless Functional Component -</u></b> Like as JS Function, return HTML (JSX) which describes the UI. Need to import only one component i.e. React
 ```
 function Welcome(props) {
     return <h1>Welcome, {props.name}</h1>;
 }
 ```
 
-2. Stateful Class Component - Like regular ES6 classes that extend component class from react library. Must contain render method which return HTML. Need to import two components i.e. React and component class from react. <br>
+<b><u>Stateful Class Component -</u></b> Like regular ES6 classes that extend component class from react library. Must contain render method which return HTML. Need to import two components i.e. React and component class from react. <br>
 <b>create class and class should be extend component and class has to implement render function which will return null or some HTML. </b>
 ```
 class Welcome extends React.Component{
@@ -41,7 +44,7 @@ class Welcome extends React.Component{
 
 ‼ <b>Difference between both components -</b> 
 <img src="/Assests/DiffBetweenComponents.png" alt="Both Components"> <br>
-Note:- Functional comp isn't stateless. 
+<b>Note:-</b> the introduction of React Hooks (like useState, useEffect, etc.) in React 16.8, functional components can now manage state and use lifecycle-like methods. So, functional components are no longer inherently stateless.
 
 ‼ <b>JSX -</b> 
 1. JavaScript XML is a extension to JS lang syntax. 
@@ -55,18 +58,38 @@ Note:- Functional comp isn't stateless.
 3. camelcase prop naming convention :- * onclick - onClick, tabindex - tabIndex
 
 ‼ <b>Props -</b> 
-Props is just an object that contains the attributes and their values which have been passed through parent component. They are immutable. 
+Props are attributes that are passed from a parent component to a child component. They are read-only within the child component, and the component cannot modify their value.
 
 ‼ <b>State -</b>
-The state is a built-in React object that is used to contain data or information about the component. A component's state can change over time; whenever it changes, the component re-renders.
+State is a component's memory that stores data and information that determines how a component behaves and renders to the user. A component's state can change over time; whenever it changes, the component re-renders.
 
 ‼ <b>Props VS State -</b>
-<img src="/Assests/PropVsState.png" alt="Prop Vs State"> <br>
+<img src="/Assests/PropVsState.png" alt="Prop Vs State"> <br> 
 
-‼ <b>setState -</b>
-1. Always make use of setState and never modify the state directly.
-2. Code has to be executed after the state has been updated. Place that code in the call back function which is second argument to setState method.
-3. When you have to update state based on the prev state value, pass in a func as an argument instead of regular object. 
+‼ <b>State Immutability -</b>
+State immutability in React refers to the principle that the state of a component should never be modified directly. Instead, you should create a new copy of the state with the updated values and replace the old state with this new one. This practice is crucial because React relies on immutability to efficiently detect changes in the state and re-render the component accordingly. <br><br>
+<b>How to Maintain Immutability in React -</b>
+To maintain immutability, you should always return a new object or array when updating the state rather than modifying the existing one directly.<br>
+
+1. Updating Object -
+```
+this.setState(prevState => ({
+  user: {
+    ...prevState.user, // Copy the previous state
+    name: 'New Name'   // Update the name property
+  }
+}));
+```
+
+2. Updating Arrays -
+```
+this.setState(prevState => ({
+  items: [...prevState.items, newItem] // Create a new array with the new item added
+}));
+```
+
+‼ <b>Lifting State -</b>
+Lifting state up is a common pattern in React used to manage shared state between multiple components. When two or more components need to share and interact with the same state, you lift the state up to their nearest common ancestor. This way, the ancestor component owns the state, and it can pass the necessary data and event handlers down to the child components via props.
 
 ‼ <b>Destructuring the props and state -</b>
 The destructuring is an ES6 feature that makes it possible to unpack values from arrays or properties from objects into distinct variables. In React, destructuring props and states improve code readability.
