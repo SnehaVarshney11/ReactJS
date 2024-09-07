@@ -1,6 +1,5 @@
-# All about ReactJS
-
-‼ <b>What is React?</b>  <br>
+# Introduction to React
+### What is React?  
 * It's a free, open-source JavaScript library that's used to build user interfaces (UIs) for single-page applications. It's a component-based library that's designed to simplify the process of building UIs by combining sections of code, or components, into full websites.  <br>
 * Created and Maintained by Facebook. <br>
 * It has Component Based Architecture. (like header, footer, sidenav etc...) <br>
@@ -9,7 +8,7 @@
 * It'll fit everywhere whether it is portion of any page, complete page oe entire app itself. <br>
 * Focus on View Layer. <br>
 
-‼ <b>Create React Application - </b>  <br>
+### Setting Up React Project  
 1. Using npx <br>
 run - npx create-react-app app-name <br>
 cd app-name <br> npm run start <br>
@@ -19,7 +18,7 @@ run - create-react-app<app-name> <br>
 
 <b>NOTE -></b> Use npx to create a React project because it ensures you're using the latest version of create-react-app without needing to install it globally. It's simpler and avoids potential version conflicts.
 
-‼ <b>Components -</b>  <br>
+### React Components  
 <img src="/Assests/Component.png" alt="Component"> <br>
 * They are reusable. <br>
 * Component code is placed on JavaScript file. E.g.- AppComponent is placed in App.js <br>
@@ -46,7 +45,8 @@ class Welcome extends React.Component{
 <img src="/Assests/DiffBetweenComponents.png" alt="Both Components"> <br>
 <b>Note:-</b> the introduction of React Hooks (like useState, useEffect, etc.) in React 16.8, functional components can now manage state and use lifecycle-like methods. So, functional components are no longer inherently stateless.
 
-‼ <b>JSX -</b> 
+# JSX
+### What is JSX? 
 1. JavaScript XML is a extension to JS lang syntax. 
 2. Write XML-like code for XML and Components.
 3. JSX tags have a tag name, attributes and children. 
@@ -56,6 +56,33 @@ class Welcome extends React.Component{
 1. Class - className (replaced)
 2. for - htmlFor
 3. camelcase prop naming convention :- * onclick - onClick, tabindex - tabIndex
+
+### Embedding Expressions
+Embedding expressions in JSX allows us to include JavaScript expressions within the JSX markup. This can be useful for rendering dynamic content or performing operations directly within your JSX. <br>
+
+<b>Basic Embedding</b> -> embed any JavaScript expression inside curly braces {} in JSX.
+```
+const name = 'Sneha';
+const element = <h1>Hello, {name}!</h1>;
+```
+
+<b>Expressions in Attributes</b> -> 
+```
+const imageUrl = 'https://example.com/logo.png';
+const element = <img src={imageUrl} alt="Logo " />;
+```
+
+<b>Embedding Functions</b> -> 
+```
+function getGreeting(name) {
+  return `Hello, ${name}!`;
+}
+
+const name = 'Sneha';
+const element = <h1>{getGreeting(name)}</h1>;
+```
+
+# Components
 
 ‼ <b>Props -</b> 
 Props are attributes that are passed from a parent component to a child component. They are read-only within the child component, and the component cannot modify their value.
