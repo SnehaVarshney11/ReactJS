@@ -58,34 +58,14 @@ class Welcome extends React.Component{
 3. camelcase prop naming convention :- * onclick - onClick, tabindex - tabIndex
 
 ### Embedding Expressions
-Embedding expressions in JSX allows us to include JavaScript expressions within the JSX markup. This can be useful for rendering dynamic content or performing operations directly within your JSX. <br>
-
-<b>Basic Embedding</b> -> embed any JavaScript expression inside curly braces {} in JSX.
-```
-const name = 'Sneha';
-const element = <h1>Hello, {name}!</h1>;
-```
-
-<b>Expressions in Attributes</b> -> 
-```
-const imageUrl = 'https://example.com/logo.png';
-const element = <img src={imageUrl} alt="Logo " />;
-```
-
-<b>Embedding Functions</b> -> 
-```
-function getGreeting(name) {
-  return `Hello, ${name}!`;
-}
-
-const name = 'Sneha';
-const element = <h1>{getGreeting(name)}</h1>;
-```
+Embedding expressions in JSX allows us to include JavaScript expressions within the JSX markup. This can be useful for rendering dynamic content or performing operations directly within your JSX. 
 
 # Components
+### Component Composition
+It's a powerful concept that allows us to build complex UI by combining simpler, resusable components. It makes easy to maintain our application. 
 
-‼ <b>Props -</b> 
-Props are attributes that are passed from a parent component to a child component. They are read-only within the child component, and the component cannot modify their value.
+### Props 
+Props are attributes that are passed from a parent component to a child component. They are read-only within the child component, and the component cannot modify their value. Props allow us to make components more dynamic and reusable by giving them the ability to accept external data or functions.
 
 ‼ <b>State -</b>
 State is a component's memory that stores data and information that determines how a component behaves and renders to the user. A component's state can change over time; whenever it changes, the component re-renders.
