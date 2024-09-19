@@ -41,7 +41,7 @@ class Welcome extends React.Component{
 }
 ```
 
-‼ <b>Difference between both components -</b> 
+### Difference between both components 
 <img src="/Assests/DiffBetweenComponents.png" alt="Both Components"> <br>
 <b>Note:-</b> the introduction of React Hooks (like useState, useEffect, etc.) in React 16.8, functional components can now manage state and use lifecycle-like methods. So, functional components are no longer inherently stateless.
 
@@ -50,9 +50,9 @@ class Welcome extends React.Component{
 1. JavaScript XML is a extension to JS lang syntax. 
 2. Write XML-like code for XML and Components.
 3. JSX tags have a tag name, attributes and children. 
-4. We can write react code without JSX but JSX makes react code simpler and elegant. 
+4. We can write react code without JSX but JSX makes react code simpler and elegant. <br>
 
-‼ <b>JSX Differences -</b>
+<b>JSX Differences -</b>
 1. Class - className (replaced)
 2. for - htmlFor
 3. camelcase prop naming convention :- * onclick - onClick, tabindex - tabIndex
@@ -67,13 +67,19 @@ It's a powerful concept that allows us to build complex UI by combining simpler,
 ### Props 
 Props are attributes that are passed from a parent component to a child component. They are read-only within the child component, and the component cannot modify their value. Props allow us to make components more dynamic and reusable by giving them the ability to accept external data or functions.
 
-‼ <b>State -</b>
+# State Management
+### State 
 State is a component's memory that stores data and information that determines how a component behaves and renders to the user. A component's state can change over time; whenever it changes, the component re-renders.
 
-‼ <b>Props VS State -</b>
+### useState Hook 
+The useState hook is a React hook that allows us to add state to functional components. Using useState, we can create local state variables that React will keep track of and update as needed. <br>
+Syntax:
+const [stateVariable, setStateFunction] = useState(initialValue);
+
+### Props VS State 
 <img src="/Assests/PropVsState.png" alt="Prop Vs State"> <br> 
 
-‼ <b>State Immutability -</b>
+### State Immutability 
 State immutability in React refers to the principle that the state of a component should never be modified directly. Instead, you should create a new copy of the state with the updated values and replace the old state with this new one. This practice is crucial because React relies on immutability to efficiently detect changes in the state and re-render the component accordingly. <br><br>
 <b>How to Maintain Immutability in React -</b>
 To maintain immutability, you should always return a new object or array when updating the state rather than modifying the existing one directly.<br>
@@ -95,8 +101,69 @@ this.setState(prevState => ({
 }));
 ```
 
-‼ <b>Lifting State -</b>
-Lifting state up is a common pattern in React used to manage shared state between multiple components. When two or more components need to share and interact with the same state, you lift the state up to their nearest common ancestor. This way, the ancestor component owns the state, and it can pass the necessary data and event handlers down to the child components via props.
+### Lifting State Up
+It refers to the process of moving the state from a child component to a common parent component, so that multiple child components can share and sync the same state. This is useful when two or more components need to communicate or share data.
+
+# Life Cycle Methods (Class Component) 
+1. Mounting -> When an instance of a component is being created and inserted into DOM. There are 4 methods: constructor, static getDerivedStateFromProps, render and componentDidMount <br>
+A) constructor(props) - <br>
+🎗 A special function that will get call whenever a new component is created. <br>
+🎗 Initializing state, Binding the event handler. <br>
+🎗 Don't cause side effect. Ex: HTTP request <br>
+🎗 super(props), Directly override this.state <br> <br>
+B) static getDerivedStateFromProps(props, state) - <br>
+🎗 Rarely Used Method. <br>
+🎗 When the state of the component depends on the changes in props over time. <br>
+🎗 Set the state. <br>
+🎗 It's a static method and not use this keyword. Simply return object that represent new state. <br>
+🎗 Don't cause side effect. Ex: HTTP request <br><br>
+C) render() - <br>
+🎗 Only required method. <br>
+🎗 Read props & state and return JSX. <br>
+🎗 Don't change the state or interact with DOM and make ajax calls. <br>
+🎗 Children components lifecycle methods are also executed. <br><br>
+D) componentDidMount() - <br>
+🎗 Will be called only once in whole lifecycle and invoked immediately after component and it's all children components have been rendered to DOM. <br>
+🎗 Cause side effect. Ex: Interact with DOM or perform any ajax calls to load data. <br> 
+
+2. Updating -> When a component is being re-rendered as a result of changes to either its props or state. There are 5 methods: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate <br>
+A) static getDerivedStateFromProps(props, state) - <br>
+🎗 Method is called everytime a component is re-renderd. <br>
+🎗 Set the state. <br>
+🎗 Don't cause side effects. Ex: HTTP requests.  <br><br>
+B) shouldComponentUpdate(nextProps, nextState) - <br>
+🎗 Rarely Used Method. <br>
+🎗 Dictates if the component should re-render or not <br>
+🎗 Performance optimization. <br>
+🎗 Don't cause side effects. Ex: HTTP requests, Calling the setState method. <br><br>
+C) render() -  <br>
+🎗 Only required method. <br>
+🎗 Read props & state and return JSX. <br>
+🎗 Don't change the state or interact with DOM and make ajax calls. <br><br>
+D) getSnapshotBeforeUpdate(prevProps, prevState) - <br>
+🎗 Rarely used method. <br>
+🎗 Called right before the changes from the virtual DOM are to br reflected in DOM. <br>
+🎗 Capture some info. from DOM. <br>
+🎗 Method will either return null or return a value. Returned a value will be passed as the third parameter to next method. <br><br>
+E) componentDidUpdate(prevProps, prevState, snapshot) - <br>
+🎗 Called after render is finished in re-render cycles. <br>
+🎗 Cause side effect. <br><br>
+
+3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
+A) componentWillUnmount - <br>
+🎗 Method is invoked immediately before a component is unmounted and destroyed. <br>
+🎗 Cancelling any network requests, removing event handlers, cancelling any subscription and also invalidating timers. <br>
+🎗 Don't call the setState method. <br><br>
+
+
+
+
+
+
+
+
+
+
 
 ‼ <b>Destructuring the props and state -</b>
 The destructuring is an ES6 feature that makes it possible to unpack values from arrays or properties from objects into distinct variables. In React, destructuring props and states improve code readability.
@@ -157,56 +224,7 @@ this.changeEmailHandler = (event) => {
 }
 ```
 
-‼ <b>Life Cycle Methods in a Class Component -</b> 
-1. Mounting -> When an instance of a component is being created and inserted into DOM. There are 4 methods: constructor, static getDerivedStateFromProps, render and componentDidMount <br>
-A) constructor(props) - <br>
-🎗 A special function that will get call whenever a new component is created. <br>
-🎗 Initializing state, Binding the event handler. <br>
-🎗 Don't cause side effect. Ex: HTTP request <br>
-🎗 super(props), Directly override this.state <br> <br>
-B) static getDerivedStateFromProps(props, state) - <br>
-🎗 Rarely Used Method. <br>
-🎗 When the state of the component depends on the changes in props over time. <br>
-🎗 Set the state. <br>
-🎗 It's a static method and not use this keyword. Simply return object that represent new state. <br>
-🎗 Don't cause side effect. Ex: HTTP request <br><br>
-C) render() - <br>
-🎗 Only required method. <br>
-🎗 Read props & state and return JSX. <br>
-🎗 Don't change the state or interact with DOM and make ajax calls. <br>
-🎗 Children components lifecycle methods are also executed. <br><br>
-D) componentDidMount() - <br>
-🎗 Will be called only once in whole lifecycle and invoked immediately after component and it's all children components have been rendered to DOM. <br>
-🎗 Cause side effect. Ex: Interact with DOM or perform any ajax calls to load data. <br> 
 
-2. Updating -> When a component is being re-rendered as a result of changes to either its props or state. There are 5 methods: static getDerivedStateFromProps, shouldComponentUpdate, render, getSnapshotBeforeUpdate and componentDidUpdate <br>
-A) static getDerivedStateFromProps(props, state) - <br>
-🎗 Method is called everytime a component is re-renderd. <br>
-🎗 Set the state. <br>
-🎗 Don't cause side effects. Ex: HTTP requests.  <br><br>
-B) shouldComponentUpdate(nextProps, nextState) - <br>
-🎗 Rarely Used Method. <br>
-🎗 Dictates if the component should re-render or not <br>
-🎗 Performance optimization. <br>
-🎗 Don't cause side effects. Ex: HTTP requests, Calling the setState method. <br><br>
-C) render() -  <br>
-🎗 Only required method. <br>
-🎗 Read props & state and return JSX. <br>
-🎗 Don't change the state or interact with DOM and make ajax calls. <br><br>
-D) getSnapshotBeforeUpdate(prevProps, prevState) - <br>
-🎗 Rarely used method. <br>
-🎗 Called right before the changes from the virtual DOM are to br reflected in DOM. <br>
-🎗 Capture some info. from DOM. <br>
-🎗 Method will either return null or return a value. Returned a value will be passed as the third parameter to next method. <br><br>
-E) componentDidUpdate(prevProps, prevState, snapshot) - <br>
-🎗 Called after render is finished in re-render cycles. <br>
-🎗 Cause side effect. <br><br>
-
-3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
-A) componentWillUnmount - <br>
-🎗 Method is invoked immediately before a component is unmounted and destroyed. <br>
-🎗 Cancelling any network requests, removing event handlers, cancelling any subscription and also invalidating timers. <br>
-🎗 Don't call the setState method. <br><br>
 
 4. Error Handling -> When there is an error during rendering, in a lifecycle method, or in a constructor of any child component. There are 2 methods: static getDerivedStateFromError and componentDidCatch <br> 
 A) static getDerivedStateFromError(error) <br>
