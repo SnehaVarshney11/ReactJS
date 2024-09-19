@@ -135,30 +135,34 @@ An update can be caused by changes to props or state. These methods are called i
 1. static getDerivedStateFromProps(props, state) - <br>
 🎗 Method is called everytime a component is re-renderd. <br>
 🎗 Set the state. <br>
-🎗 Don't cause side effects. Ex: HTTP requests.  <br><br>
+🎗 Don't cause side effects. Ex: HTTP requests.  
+
 2. shouldComponentUpdate(nextProps, nextState) - <br>
 🎗 Rarely Used Method. <br>
 🎗 Dictates if the component should re-render or not <br>
 🎗 Performance optimization. <br>
-🎗 Don't cause side effects. Ex: HTTP requests, Calling the setState method. <br><br>
+🎗 Don't cause side effects. Ex: HTTP requests, Calling the setState method. 
+
 3. render() -  <br>
 🎗 Only required method. <br>
 🎗 Read props & state and return JSX. <br>
-🎗 Don't change the state or interact with DOM and make ajax calls. <br><br>
+🎗 Don't change the state or interact with DOM and make ajax calls. 
+
 4. getSnapshotBeforeUpdate(prevProps, prevState) - <br>
 🎗 Rarely used method. <br>
 🎗 Called right before the changes from the virtual DOM are to br reflected in DOM. <br>
 🎗 Capture some info. from DOM. <br>
-🎗 Method will either return null or return a value. Returned a value will be passed as the third parameter to next method. <br><br>
+🎗 Method will either return null or return a value. Returned a value will be passed as the third parameter to next method. 
+
 5. componentDidUpdate(prevProps, prevState, snapshot) - <br>
 🎗 Called after render is finished in re-render cycles. <br>
-🎗 Cause side effect. <br><br>
+🎗 Cause side effect. 
 
 3. Unmounting -> When a component is being removed from DOM. There is 1 method: componentWillUnmount <br>
 A) componentWillUnmount - <br>
 🎗 Method is invoked immediately before a component is unmounted and destroyed. <br>
 🎗 Cancelling any network requests, removing event handlers, cancelling any subscription and also invalidating timers. <br>
-🎗 Don't call the setState method. <br><br>
+🎗 Don't call the setState method. 
 
 
 
