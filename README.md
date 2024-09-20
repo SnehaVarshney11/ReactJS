@@ -190,18 +190,19 @@ React Hooks are introduce in React 16.8. It allows us to manage state and lifecy
 ### State Hooks 
 Let's a component remember information like user input. For example, a form component can use state to store the input value, while an image gallery component can use state to store the selected image index. <br>
 
-<b>1. <u>useState - </u></b>
+<b><u>1. useState - </u></b>
+
 * Declares state variable that can directly updated. 
 * It is simpler and suitable for straight-forward state management. Lets you add a state variable to your component. <br>
 Example -> Adding state to a component, Updating state based on prev state, Updating object and arays in state, Managing form input, Tracking simple counter etc..<br>
 Syntax -> const [state, setState] = useState(initialState);
 
-<b>2. <u>useReducer - </u></b>
-* Declares state variable with update logic inside reducer function.
-* It's powerful asd suitable for complex state logic where state update depends on multiple factors. Lets you add a reducer to your component.
-<br>
-Example -> Shopping Cart Management - In an e-commerce application, a shopping cart can go through various states (empty, itemAdded, itemRemoved, checkedOut). Each action (like adding/removing items, applying discounts) affects multiple variables such as total price, item quantity, and discount values. useReducer helps to manage these transitions efficiently by handling each state change based on the action dispatched. etc..<br>
-Syntax -> const [state, dispatch] = useReducer(reducer, initialArg, init?);
+<b><u>2. useReducer - </u></b>
+
+* Declares state variable with update logic inside reducer function. 
+* It's powerful asd suitable for complex state logic where state update depends on multiple factors. Lets you add a reducer to your component. <br>
+Example -> Shopping Cart Management - In an e-commerce application, a shopping cart can go through various states (empty, itemAdded, itemRemoved, checkedOut). Each action (like adding/removing items, applying discounts) affects multiple variables such as total price, item quantity, and discount values. useReducer helps to manage these transitions efficiently by handling each state change based on the action dispatched. etc..<br> 
+Syntax -> const [state, dispatch] = useReducer(reducer, initialArg, init?);<br>
 <img src="/Assests/useReducer.png" alt="useReducer Hook Syntax"> <br>
 
 
